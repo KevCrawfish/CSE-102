@@ -20,7 +20,7 @@ int main(int argc, char *argv[]){
   int edges;
   int u;
   int v;
-  int w;
+  double w;
 
   infile >> vertices;
   Graph g(vertices);
