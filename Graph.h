@@ -23,8 +23,8 @@ private:
 
 public:
   Graph(int n){
-    parent = (int *)calloc(n, sizeof(int));
-    rank = (int *)calloc(n, sizeof(int));
+    parent = (int *)calloc(n + 1, sizeof(int));
+    rank = (int *)calloc(n + 1, sizeof(int));
   }
   ~Graph();
   int findSet(int x);
