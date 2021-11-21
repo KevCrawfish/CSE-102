@@ -57,9 +57,9 @@ void Graph::mstKruskal(int edges, int vertices){
     }
   }
 
-  float t = 0;
+  double t = 0;
   for(int i = 0; i < vertices - 1; i++){
-    float w = std::get<0>(M[i]);
+    double w = std::get<0>(M[i]);
     int u = std::get<1>(M[i]);
     int v = std::get<2>(M[i]);
     int e = std::get<3>(M[i]);

@@ -15,8 +15,8 @@
 class Graph{
 
 private:
-  std::vector<std::tuple <int, int, int, int>> G;
-  std::vector<std::tuple <int, int, int, int>> M;
+  std::vector<std::tuple <double, int, int, int>> G;
+  std::vector<std::tuple <double, int, int, int>> M;
 
   int *parent;
   int *rank;
