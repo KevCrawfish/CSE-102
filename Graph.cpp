@@ -5,6 +5,11 @@
 //-----------------------------------------------------------------------------
 #include "Graph.h"
 
+Graph::~Graph(){
+  free(parent);
+  free(rank);
+}
+
 void Graph::makeSet(int x){
   parent[x] = x;
   rank[x] = 0;
@@ -41,7 +46,7 @@ void Graph::mstKruskal(int edges, int vertices){
     makeSet(i);
   }
 
-  sort(G.begin(), G.end());
+  std::sort(G.begin(), G.end());
 
   for(int i = 0; i < edges; i++){
     int u = std::get<1>(G[i]);

@@ -12,7 +12,6 @@
 #ifndef Graph_H_INCLUDE_
 #define Graph_H_INCLUDE_
 
-// Exported type --------------------------------------------------------------
 class Graph{
 
 private:
@@ -21,14 +20,13 @@ private:
 
   int *parent;
   int *rank;
-  int vertices;
 
 public:
   Graph(int n){
-    vertices = n;
-    parent = new int[n];
-    rank = new int[n];
+    parent = (int *)calloc(n, sizeof(int));
+    rank = (int *)calloc(n, sizeof(int));
   }
+  ~Graph();
   int findSet(int x);
   void makeSet(int x);
   void addEdge(int u, int v, int w, int e);

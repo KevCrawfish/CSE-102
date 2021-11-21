@@ -15,6 +15,7 @@ int main(int argc, char *argv[]){
 
   std::ifstream infile (argv[1]);
   std::ofstream outfile (argv[2]);
+  std::streambuf *coutbuf = std::cout.rdbuf();
   int vertices;
   int edges;
   int u;
@@ -33,6 +34,7 @@ int main(int argc, char *argv[]){
 
   std::cout.rdbuf(outfile.rdbuf());
   g.mstKruskal(edges, vertices);
+  std::cout.rdbuf(coutbuf);
 
   infile.close();
   outfile.close();
