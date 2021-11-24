@@ -2,6 +2,9 @@
 // Kevin M Crawford, kemcrawf, programming assignment
 // Graph.h
 // Header file for Graph ADT
+// Graph.h and Graph.cpp were implemented with assistance from https://www.programiz.com/dsa/kruskal-algorithm
+// Functions in Graph.cpp were implemented with assistance from Introduction to Algorithms (3rd edition) by Cormen, Leiserson, Rivest and Stein
+//    pages 571 and 631 
 //-----------------------------------------------------------------------------
 #include <vector>
 #include <bits/stdc++.h>
@@ -29,7 +32,7 @@ public:
   ~Graph();
   int findSet(int x);
   void makeSet(int x);
-  void addEdge(int u, int v, int w, int e);
+  void addEdge(int u, int v, double w, int e);
   void unions(int x, int y);
   void link(int x, int y);
   void mstKruskal(int edges, int vertices);

@@ -37,7 +37,7 @@ int Graph::findSet(int x){
   return parent[x];
 }
 
-void Graph::addEdge(int u, int v, int w, int e) {
+void Graph::addEdge(int u, int v, double w, int e) {
   G.push_back(std::make_tuple(w, u, v, e));
 }
 
